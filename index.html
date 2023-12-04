@@ -2,66 +2,398 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS level 1</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>News Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        button { 
-            background-color: blue;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(253, 247, 240);
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+            border: solid;
+            border-color: whitesmoke;
+            
+
+        }
+        #wayto {
+            position: sticky;
+            top:0;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            z-index: 3;
+            border: solid;
+            border-color: #333;
+            bottom: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: end;
+            align-content: center;
+            ;
+
+            
+        
+        }
+
+        #articleimage {
+            padding: 5px;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            background-color: #444;
+            overflow: hidden;
+            z-index: 3;
+            border:none;
+            align-items: center;
+            align-content: center;
+            transition-property: all;
+            transition-duration: 15s;;
+            
+        }
+
+        #articleimage:hover {
+            background-color: #383838;
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            
+        }
+
+        nav a {
+            float: left;;
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-evenly
+            ;
+            transition-property: all;
+            transition-duration: -3s;
+        
+            
+        }
+
+        nav a:hover {
+           text-decoration: underline;
+           text-decoration-color: aqua;
+           text-decoration-thickness: 2px;
+            color: rgb(213, 219, 213);
+            border-radius: 10px;
+            height: 10%;
+            font-size: 110%;
+            
+        }
+
+        h1, p {
+            margin: 5px 5px 5px 5px;
+            position: sticky;
+            top:0;
+
+        }
+        input:hover {
+            background-color: #fafff1; 
+            text-decoration: underline;
+            text-decoration-color: aqua;
+        }
+        
+        h2:hover {
+            color: rgb(253, 79, 79);
+            text-decoration: underline;
+            text-decoration-color: #0380f5;
+            font-size: 25px;
+        }
+
+        h2 {
+            color:#333;
+        }
+        
+
+        section {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3vh;
+        }
+
+        article {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 100%;
+            
+        }
+
+        .articleone {
+            text-decoration: none;
+           
+            
+        }
+
+        article img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        #articlefirst {
+            background-image: url("image/photo_5357560682435956245_y.jpg");
+            background-size: cover;
+        }
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 13px;
+            padding-top: 0;
+            position: fixed;
+            right: 0;
+            width: 100%;
+            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            border: solid;
+            border-color: rgb(63, 60, 55);
+            display: flex;
+            justify-content: center;
+            align-items: start;
+
+        }
+
+        #bottom-navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        #bottom-navbar a {
+            color: #fff;
+            width: 100px;
+            text-decoration: none;
+            padding: 1% 4% 1% 4%;
+            border: solid;
+            border-color: #333;
+            border-radius: 10px;
+             /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  */
+            box-shadow:
+            inset 0 -5px 5px rgba(211, 211, 211, 0.5),
+            1px 1px 19px rgba(5, 5, 5, 0.6);
+    
+        }
+
+        #bottom-navbar a:hover {
+            background-color: aqua;
+            color: #333;
+            font-size: 110%;
+        }
+
+        #search-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+
+            margin: 5px 0 5px 0;
+        }
+        #footerp {
+            position: relative;
+            bottom: 0;
+            margin: 10vh 0 4em 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #444;
+            padding: 50px 0 80px 0;
+            color: #fff;
+            border: solid;
+            border-color: rgb(255, 255, 255);
+            text-shadow: 19px 19px 19px rgba(0, 0, 0, 0.5);
+
+        }
+
+        #search-input {
+            float: right;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px 0px 0px 20px;
+            outline: none;
+            margin-bottom: 0px;
+            width: calc(80% - 10px);
+            border: solid;
+            border-width: 4px;
+            border-color: #444;
+            box-shadow:0px 0px 19px rgba(0, 0, 0, 0.5);
+            width: calc(70% - 7px)
+            
+        }
+
+       
+
+        #search-button {
+            /* padding: 15px; */
+            margin-right: 0;
+            font-size:18px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            background-color: rgba(116, 241, 43, 0.8);
+            color: #fff;
+            cursor: pointer;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(360deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: solid;
+            border-width: 3px;
+            border-color: #444;
+            box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.5);
+        }
+        #search-button:active {
+            background-color: rgb(130, 255, 130);
+            color: black;
+        }
+
+        #search-icon {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+             #search-input { 
+                width: 100%;
+            } #search-button {
+                width: 10%;
+            } 
         }
     </style>
-    
 </head>
 <body>
-    <h1 id="headingzero">
-        This is heading to test out my current skills
-    </h1>
-   <span> <h1 id="hello"> Hello from Jahir Khan! </h1> </span>
-    <h1 id="headingOne">
-         This is heading one
-         </h1>
-    <h1 id="headingTwo"> 
-        This is heading two 
-    </h1>
-    <h1 id="headingThree"> 
-        This is heading three
-     </h1>
-    <p id="ParagraphTwo"> 
-        This is an example for paragraph writting
-     </p>
-   <dev ><button id="button"> 
-    Subscribe 
-</button> </dev>
-    
-    <div id="box">
-        I have this project to write anything here so I am typing anything here without knowing what I am typing.
+
+    <header>
+        <img id="wayto" src="image/WAY TO JANNHA.png" height="80" alt="Logo">
+        <h1>WAY TO JANNAH</h1>
+        <p>NEWS WEBSITE</p>
+    </header>
+
+    <nav>
+        <a href="#" target="_main">
+            <i class="fa-solid fa-house"></i>
+            <br>
+            Home  
+        </a>
+        <a href="#" target="_main2">
+          <i class="fa-solid fa-landmark"></i>
+          Politics 
+        </a>
+        <a href="#" target="_main3">  
+            <i class="fa-solid fa-chalkboard"></i>
+            Technology
+        </a>
+        <a href="#">  
+            <i class="fa-solid fa-film"></i>
+            Entertainment
+        </a>
+        <a href="#">  
+            <i class="fa-solid fa-futbol"></i>
+            Sports
+        </a>
+        <a href="#">  
+            <i class="fa-solid fa-person-military-rifle">    </i>
+            Wars
+        </a>
+        <a href="#">  
+            <i class="fa-regular fa-clock"></i>
+            Latest
+        </a>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search latest news">
+            <button id="search-button" >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </nav>
+    <div>
+        <a id="articleimage" href="#" target="_main"><img  src="image/WAY TO JANNHA.png" height="30"></a>
     </div>
-     
-        <div id="Paragraphzero">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aspernatur aliquid eaque deserunt porro, explicabo natus quaerat soluta inventore temporibus voluptatem consequatur odit excepturi tenetur ipsa voluptates voluptate totam voluptatum?</div>
-        <br>
-        <p id="ParagraphOne">
-         Reiciendis accusantium expedita eligendi illo laudantium molestiae, sequi aperiam facilis repudiandae illum, dicta veniam soluta saepe dignissimos ullam omnis et. Repellat minus, praesentium illo unde maiores rerum dolores quisquam soluta?
-         Vitae ducimus officiis voluptatem dolores consectetur tenetur eos nesciunt fugiat ut. Voluptatum in inventore excepturi soluta qui repellendus, laborum officia iusto voluptas dicta repellat harum magnam tempora, ipsam fugiat ipsum?
-         Porro temporibus fugiat et. Odit consequatur neque sunt molestias unde odio maxime nostrum, tempora distinctio, nesciunt sapiente autem quo accusamus harum. Aspernatur excepturi dolorem velit dolor quia facilis dignissimos minus!
-         At odit nulla eum magnam tenetur, sapiente, corporis accusamus alias hic omnis assumenda architecto aperiam minus. Consequuntur, facilis sit eum, soluta fuga at fugiat quibusdam quia nemo enim amet asperiores.
-         Odio, asperiores veniam tenetur, est voluptatibus porro fugit atque libero maiores temporibus architecto quisquam quas minus nisi dolore illum necessitatibus quam ducimus culpa nemo dolores optio qui? Fugit, beatae labore.
-         Dolorem, quae! Iste aut tenetur odio ea sapiente, sint ipsam qui unde neque ducimus quis rem perspiciatis iusto blanditiis numquam, officia inventore minima harum fuga corrupti a reprehenderit accusantium veniam?
-         Expedita consectetur optio eos sunt voluptates officiis. Ipsum atque consequuntur aliquid neque eos in id, perspiciatis sequi quisquam corporis dolore repellat? Laudantium corporis fuga error, natus doloremque maxime facilis quia.
-         Ex perspiciatis soluta labore delectus, velit repudiandae amet repellat dolor totam numquam doloremque inventore, tempore nam officia, vitae dolores modi? Atque nesciunt omnis sunt consequatur vitae saepe voluptatem doloremque dicta?
-         Repudiandae necessitatibus repellendus ad odio deserunt culpa optio unde dolorem architecto deleniti, eius ratione, similique sequi illum nulla officiis corrupti! Vero pariatur totam ullam, laudantium autem sint incidunt adipisci distinctio?
-         Pariatur, eligendi similique sequi asperiores tempore quaerat minus excepturi id itaque cum! Iste autem cumque sit assumenda molestias hic dignissimos aspernatur. Quis odio reiciendis aspernatur impedit dolorem hic animi illo
-</p>
-<div id="outer">
-    Here it is only for an example
-    <div id="inner">
-here it's only for anither example
-    </div>
-    <br>
-    <br>
-</div>
-<a href="index2.html" id="NextPage" alt="NEXTPAGE" > Subscribe</a>
+
+    <section>
+        <article>
+            <a class="articleone" id="articlefirst" href="#">
+                <img src="image/photo_5357560682435956245_y.jpg">
+                <h2>Pakistan Slams US: Terrorists Getting Hold of Uncle Sam's Leftover Arms from Afghanistan</h2>
+            </a>
+            <p>
+                Pakistan's caretaker PM Anwaar-Ul-Haq Kakar believes that US weapons, which are easily available in the black market, are being used for terrorism in Pakistan, a media report said.
+                Kakar dismissed the significance of the United States acknowledging or denying the use of its weapons in Pakistan, pointing to tangible proof that these weapons are entering the illicit markets and are being actively utilized.
+                He affirmed that Pakistan's position is based on solid evidence, not unfounded speculations.
+            </p>
+        </article>
+        <article>
+            <a href="#" id="articlesecond" class="articleone">
+                <img src="image/hamas.webp">
+            <h2>Hamas: The massacres carried out by the occupation forces against Al-Shifa, Al-Quds, and Indonesian hospitals represent atrocious crimes for which Washington and the Western capitals that back the Nazi occupation bear full responsibility.</h2></a>
+            <p>The zionist terrorist occupation has once more executed a horrific premeditated massacre, carried out in broad daylight at the entrance of Al-Shifa Hospital, bombing ambulances transporting the wounded and injured, leading to numerous martyrs and injuring dozens. Simultaneously, deliberate bombings were conducted near Al-Quds Hospital and the Indonesian Hospital, revealing a calculated intent to strike at the healthcare infrastructure without any consideration of the repercussions.
+
+                We hold the United States of America and the international community responsible for this massacre, which is an affront to humanity, due to their deplorable silence and the disgraceful American support for the terrorism of the Nazi-zionist occupation. We warn against the continuation of such atrocities by this criminal occupier, especially its targeting of civilians and medical amenities.
+                
+                Islamic Resistance Movement - Hamas
+                
+                Friday: 19 Rabi' Al-Akhir 1445 AH  
+                Corresponding to: November 3, 2023 CE</p>
+            
+        </article>
+        <!-- Add more articles as needed -->
+    </section>
+
+    <footer>
+        <div id="bottom-navbar">
+            <a href="#"><i class="fa-solid fa-house"></i></a>
+            <a href="#"><i class="fa-solid fa-landmark"></i></a>
+            <a href="#"><i class="fa-solid fa-chalkboard"></i></a>
+            <a href="#"><i class="fa-solid fa-film"></i></a>
+            <a href="#"><i class="fa-solid fa-futbol"></i></a>
+            <a href="#"><i class="fa-solid fa-person-military-rifle"></i></a>
+            <a href="#"><i class="fa-regular fa-clock"></i></a>
+        </div>
+    </footer>
+    <p id="footerp">&copy; 2023 News Website. All rights reserved.</p>
+       
+
+    <!-- <script>
+        function performSearch() {
+            // Add your search logic here
+            var searchTerm = document.getElementById('search-input').value;
+            alert('Performing search for: ' + searchTerm);
+            // You can implement the actual search functionality using AJAX or other methods
+        }
+    </script> -->
 
 </body>
 </html>
