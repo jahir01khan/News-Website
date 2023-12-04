@@ -1,0 +1,138 @@
+*{
+    background-color: rgb(250, 234, 206);
+    color: black;
+}
+ body
+{
+    background-color:rgb(105, 155, 179);
+    
+}
+ #hello
+{ 
+    color:rgb(255, 138, 255);
+    background-color: rgb(47, 83, 65);
+    text-align: center;
+    font-family: arial;
+    font-size: 99px;
+    width: 1070px;
+    box-shadow: 0px 0px 19px black;
+    /* border-style:ridge; */
+    /* border-width: 50px; */
+    /* I am going to comment out this whole part so it is written only for example purpose */
+    
+}
+.myclass
+{
+    color:black;
+    background-color: rgb(255, 185, 255);
+    position: absolute;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#headingOne {
+    color:aquamarine;
+    background-color: rgb(83, 83, 83);
+    text-align: center;
+    text-decoration: dotted blue underline;
+    font-weight: lighter;
+    line-height: 20px;
+    width: 250px;
+    border-width: 20px;
+    height: 38px;
+    border-style: solid;
+    border-color: rgb(204, 145, 68);
+
+    
+}
+#headingTwo {
+    color:rgb(47, 241, 8); 
+    background-color: rgb(87, 87, 87);
+    text-align: center;
+    text-decoration: wavy green overline;
+    font-weight: normal;
+    font-size: 40px;
+}
+#headingThree {
+    color:rgb(161, 110, 245);
+    background-color:rgb(250, 234, 206);
+    text-align: center;
+    text-decoration: underline overline black;
+    font-weight: bolder;
+}
+#box {
+    /* color:bisque; */
+    color: white;
+    background-color: rgb(0, 45, 71);
+    font-weight: bold;
+    font-size: 30px;
+    font-size: 20px;
+    display: inline;
+}
+#ParagraphOne {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+#ParagraphTwo {
+    color:rgb(255, 253, 253);
+    background-color:rgb(126, 87, 126);
+    text-align: center;
+    line-height: 22px;
+}
+div {
+    text-align: center;
+}
+#button {
+    text-align: center;
+    color: black;
+    background-color: pink;
+    border-radius: 20px;
+    border-width: 13px;
+    border-color: pink;
+    font-size: 20px;
+}
+#Paragraphzero {
+    background-color: rgb(82, 151, 151);
+    text-align: center;
+    color: rgb(255, 252, 252);
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#headingzero {
+    text-transform: capitalize;
+    text-align: center;
+}
+#outer {
+    font-size: 25px;
+    width: 300px;
+    height: 30px;
+    border-width: 20px;
+    border-style: groove;
+    border-color:rgb(82, 151, 151)
+}
+#inner {
+    font-size: 10px;
+    height: 40px;
+    width: 300px;
+    height: 30px;
+    border: 20px rgb(204, 249, 255)  groove
+}
+#NextPage {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    height: 30px;
+    width: 5000px;
+    text-decoration: none;
+    border-style: solid;
+    border-left-width: 20px;
+    border-width: 16px;
+    border-color: rgb(255, 255, 255);
+    font-size: 18px;
+    display: inline;
+
+}
